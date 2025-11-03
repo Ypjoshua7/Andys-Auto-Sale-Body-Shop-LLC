@@ -1,0 +1,96 @@
+<div class="financing-page">
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button onclick="switchLanguage('financing-spanish')" class="btn-lang">Español 🇪🇸</button>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Financing Solutions</h1>
+            <p>Get approved for in-house financing regardless of your credit history</p>
+        </div>
+    </section>
+
+    <section class="financing-content">
+        <div class="container">
+            <div class="financing-banner">
+                <div class="banner-icon">💰</div>
+                <h2>Bad Credit? No Problem!</h2>
+                <p>We specialize in helping customers with all credit situations. Our in-house financing means faster approval and flexible terms.</p>
+                <div class="benefits-list">
+                    <div>✓ No Credit Check Required</div>
+                    <div>✓ Fast Approval</div>
+                    <div>✓ Flexible Terms</div>
+                </div>
+            </div>
+
+            <div class="financing-grid">
+                <div class="benefits-sidebar">
+                    <div class="info-card">
+                        <h3>💵 Our Benefits</h3>
+                        <ul>
+                            <li>Approval in minutes</li>
+                            <li>Low down payments</li>
+                            <li>Rebuild your credit</li>
+                            <li>No hidden fees</li>
+                            <li>Drive today programs</li>
+                            <li>Trade-ins accepted</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>📄 Required Documents</h3>
+                        <ul>
+                            <li>Valid driver's license or ID</li>
+                            <li>Proof of income (pay stubs)</li>
+                            <li>Proof of residence (utility bill)</li>
+                            <li>References</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <form id="financing-form" class="financing-form">
+                    <h2>Financing Application</h2>
+                    <p class="form-subtitle">Fill out the form below to get pre-approved</p>
+                    
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Full Name *" required class="input">
+                        <input type="tel" name="phone" placeholder="Phone Number *" required class="input">
+                    </div>
+                    <input type="email" name="email" placeholder="Email Address *" required class="input">
+                    <input type="text" name="address" placeholder="Current Address" class="input">
+                    
+                    <div class="form-row">
+                        <select name="employment" required class="select">
+                            <option value="">Employment Status *</option>
+                            <option value="employed">Employed</option>
+                            <option value="self-employed">Self-Employed</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="retired">Retired</option>
+                        </select>
+                        <input type="text" name="employer" placeholder="Employer Name" class="input">
+                    </div>
+                    
+                    <div class="form-row">
+                        <input type="number" name="income" placeholder="Monthly Income *" required class="input">
+                        <input type="number" name="down-payment" placeholder="Down Payment Amount" class="input">
+                    </div>
+                    
+                    <select name="credit" class="select">
+                        <option value="">Estimated Credit Score Range</option>
+                        <option value="excellent">Excellent (750+)</option>
+                        <option value="good">Good (700-749)</option>
+                        <option value="fair">Fair (650-699)</option>
+                        <option value="poor">Poor (600-649)</option>
+                        <option value="bad">Bad (below 600)</option>
+                    </select>
+                    
+                    <input type="text" name="vehicle" placeholder="Vehicle You're Interested In" class="input">
+                    <textarea name="info" placeholder="Additional Information" class="textarea"></textarea>
+                    
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                    <p class="form-note">By submitting this form, you agree to be contacted by our financing team</p>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>

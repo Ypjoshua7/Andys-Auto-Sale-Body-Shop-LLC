@@ -1,0 +1,96 @@
+<div class="financing-page">
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button onclick="switchLanguage('financing')" class="btn-lang">English 🇺🇸</button>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Soluciones de Financiamiento</h1>
+            <p>Obtén aprobación para financiamiento interno sin importar tu historial crediticio</p>
+        </div>
+    </section>
+
+    <section class="financing-content">
+        <div class="container">
+            <div class="financing-banner">
+                <div class="banner-icon">💰</div>
+                <h2>¿Mal Crédito? ¡No Hay Problema!</h2>
+                <p>Nos especializamos en ayudar a clientes con todas las situaciones de crédito. Nuestro financiamiento interno significa aprobación más rápida y términos flexibles.</p>
+                <div class="benefits-list">
+                    <div>✓ No Se Requiere Verificación de Crédito</div>
+                    <div>✓ Aprobación Rápida</div>
+                    <div>✓ Términos Flexibles</div>
+                </div>
+            </div>
+
+            <div class="financing-grid">
+                <div class="benefits-sidebar">
+                    <div class="info-card">
+                        <h3>💵 Nuestros Beneficios</h3>
+                        <ul>
+                            <li>Aprobación en minutos</li>
+                            <li>Pagos iniciales bajos</li>
+                            <li>Reconstruye tu crédito</li>
+                            <li>Sin tarifas ocultas</li>
+                            <li>Programas de manejo hoy</li>
+                            <li>Se aceptan intercambios</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>📄 Documentos Requeridos</h3>
+                        <ul>
+                            <li>Licencia de conducir válida o ID</li>
+                            <li>Comprobante de ingresos (talones de pago)</li>
+                            <li>Comprobante de residencia (factura de servicios)</li>
+                            <li>Referencias</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <form id="financing-form" class="financing-form">
+                    <h2>Solicitud de Financiamiento</h2>
+                    <p class="form-subtitle">Complete el formulario a continuación para obtener pre-aprobación</p>
+                    
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Nombre Completo *" required class="input">
+                        <input type="tel" name="phone" placeholder="Número de Teléfono *" required class="input">
+                    </div>
+                    <input type="email" name="email" placeholder="Dirección de Correo Electrónico *" required class="input">
+                    <input type="text" name="address" placeholder="Dirección Actual" class="input">
+                    
+                    <div class="form-row">
+                        <select name="employment" required class="select">
+                            <option value="">Estado de Empleo *</option>
+                            <option value="employed">Empleado</option>
+                            <option value="self-employed">Trabajador Independiente</option>
+                            <option value="unemployed">Desempleado</option>
+                            <option value="retired">Jubilado</option>
+                        </select>
+                        <input type="text" name="employer" placeholder="Nombre del Empleador" class="input">
+                    </div>
+                    
+                    <div class="form-row">
+                        <input type="number" name="income" placeholder="Ingreso Mensual *" required class="input">
+                        <input type="number" name="down-payment" placeholder="Monto del Pago Inicial" class="input">
+                    </div>
+                    
+                    <select name="credit" class="select">
+                        <option value="">Rango de Puntuación de Crédito Estimado</option>
+                        <option value="excellent">Excelente (750+)</option>
+                        <option value="good">Bueno (700-749)</option>
+                        <option value="fair">Regular (650-699)</option>
+                        <option value="poor">Pobre (600-649)</option>
+                        <option value="bad">Malo (menos de 600)</option>
+                    </select>
+                    
+                    <input type="text" name="vehicle" placeholder="Vehículo en el que Estás Interesado" class="input">
+                    <textarea name="info" placeholder="Información Adicional" class="textarea"></textarea>
+                    
+                    <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+                    <p class="form-note">Al enviar este formulario, aceptas ser contactado por nuestro equipo de financiamiento</p>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>

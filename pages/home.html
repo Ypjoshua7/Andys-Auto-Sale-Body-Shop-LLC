@@ -1,0 +1,313 @@
+<div class="home-page">
+    <!-- Language Toggle - Mobile Friendly -->
+    <div class="language-toggle">
+        <button onclick="switchLanguage('home-spanish')" class="btn-lang">
+            <i class="fas fa-language"></i> Español
+        </button>
+    </div>
+
+    <!-- Hero Section with Images -->
+    <section class="hero">
+        <div class="hero-slider" id="hero-slider">
+            <!-- Hero slides will be dynamically added -->
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">
+                Find Your Perfect
+                <span class="gradient-text">Vehicle Today</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Quality pre-owned vehicles, expert service, and financing solutions tailored to your needs.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                <button class="btn btn-primary" onclick="scrollToInventory()">
+                    <i class="fas fa-car"></i> Browse Inventory
+                </button>
+                <a href="tel:737-708-5302" class="btn btn-outline">
+                    <i class="fas fa-phone"></i> Call: (737) 708-5302
+                </a>
+                <button class="btn btn-outline" onclick="navigateTo('bodyshop')">
+                    <i class="fas fa-wrench"></i> Body Shop
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos="zoom-in">
+                    <div class="feature-icon"><i class="fas fa-car"></i></div>
+                    <h3>Quality Vehicles</h3>
+                    <p>Hand-selected inventory with detailed inspections</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Flexible Financing</h3>
+                    <p>In-house financing with approval for all credit types</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Expert Body Shop</h3>
+                    <p>Professional collision repair and paint services</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Quality Guarantee</h3>
+                    <p>All vehicles come with warranty options</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section class="inventory" id="inventory-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Vehicle Inventory</h2>
+            <p class="section-subtitle" data-aos="fade-up">Browse our complete selection of quality vehicles</p>
+            
+            <!-- Filters -->
+            <div class="filters-container" data-aos="fade-up">
+                <div class="filters-header">
+                    <h3><i class="fas fa-filter"></i> Search & Filter</h3>
+                    <button class="btn-text" onclick="clearFilters()">Clear All</button>
+                </div>
+                <div class="filters-grid">
+                    <input type="text" id="search" placeholder="Search by make, model, year..." class="input">
+                    <select id="make-filter" class="select" onchange="applyFilters()">
+                        <option value="all">All Makes</option>
+                    </select>
+                    <select id="type-filter" class="select" onchange="applyFilters()">
+                        <option value="all">All Types</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Truck">Truck</option>
+                    </select>
+                    <select id="sort-filter" class="select" onchange="applyFilters()">
+                        <option value="newest">Newest First</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+                <div id="results-count"></div>
+            </div>
+
+            <!-- Vehicle Grid -->
+            <div id="vehicle-grid" class="vehicle-grid"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What Our Customers Say</h2>
+            <p class="section-subtitle" data-aos="fade-up">Real reviews from satisfied customers</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Best car buying experience ever! The team was professional and helped me find exactly what I needed within my budget."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>2023 Honda Accord</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Excellent service! They worked with my bad credit and got me approved the same day. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <strong>Michael Rodriguez</strong>
+                        <span>2021 Toyota RAV4</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"The body shop did an amazing job fixing my car after an accident. Looks brand new!"</p>
+                    <div class="testimonial-author">
+                        <strong>Jennifer Lee</strong>
+                        <span>Body Shop Customer</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Great selection of vehicles and transparent pricing. No hidden fees or surprises!"</p>
+                    <div class="testimonial-author">
+                        <strong>David Martinez</strong>
+                        <span>2020 Ford F-150</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Family-owned business that truly cares about their customers. Will definitely come back!"</p>
+                    <div class="testimonial-author">
+                        <strong>Amanda Chen</strong>
+                        <span>2019 Mazda CX-5</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Fast approval process and great payment terms. Made buying a car stress-free!"</p>
+                    <div class="testimonial-author">
+                        <strong>Robert Thompson</strong>
+                        <span>2022 Chevrolet Silverado</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"The staff went above and beyond to help me. Very knowledgeable and friendly!"</p>
+                    <div class="testimonial-author">
+                        <strong>Lisa Williams</strong>
+                        <span>2021 Honda CR-V</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Quality vehicles at fair prices. They even helped me with trade-in. Couldn't be happier!"</p>
+                    <div class="testimonial-author">
+                        <strong>James Anderson</strong>
+                        <span>2020 BMW 3 Series</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Honest and reliable service. They really took the time to understand what I was looking for."</p>
+                    <div class="testimonial-author">
+                        <strong>Emily Davis</strong>
+                        <span>2019 Toyota Camry</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Best dealership in Round Rock! Professional, courteous, and fair. A+ service!"</p>
+                    <div class="testimonial-author">
+                        <strong>Carlos Ramirez</strong>
+                        <span>2021 Nissan Altima</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Slider Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Gallery</h2>
+            <p class="section-subtitle" data-aos="fade-up">Explore our latest vehicles and shop</p>
+            
+            <div class="gallery-slider" id="gallery-slider">
+                <!-- Gallery images will be added here -->
+            </div>
+            <div class="gallery-dots" id="gallery-dots"></div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Visit Us Today</h2>
+            <p class="section-subtitle" data-aos="fade-up">903 Brandi Ln, Round Rock, TX 78681</p>
+            
+            <div class="map-container" data-aos="zoom-in">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3436.5!2d-97.678!3d30.508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s903+Brandi+Ln%2C+Round+Rock%2C+TX+78681!5e0!3m2!1sen!2sus!4v1234567890"
+                    width="100%" 
+                    height="450" 
+                    style="border:0; border-radius: 12px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="location-info">
+                <div class="location-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Address</strong>
+                        <p>903 Brandi Ln, Round Rock, TX 78681</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Phone</strong>
+                        <p>(737) 708-5302</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong>
+                        <p>info@andyautorepair.com</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Hours</strong>
+                        <p>Mon-Fri: 9AM-7PM<br>Sat: 9AM-6PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <p class="section-subtitle" data-aos="fade-up">Have questions? Send us a message!</p>
+            
+            <form id="home-contact-form" class="contact-form-home" data-aos="fade-up">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name"><i class="fas fa-user"></i> Full Name *</label>
+                        <input type="text" id="contact-name" name="name" required class="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone"><i class="fas fa-phone"></i> Phone Number *</label>
+                        <input type="tel" id="contact-phone" name="phone" required class="input">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-email"><i class="fas fa-envelope"></i> Email Address</label>
+                    <input type="email" id="contact-email" name="email" class="input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-message"><i class="fas fa-comment"></i> Your Message * (Up to 4,000 characters)</label>
+                    <textarea 
+                        id="contact-message" 
+                        name="message" 
+                        required 
+                        class="textarea" 
+                        maxlength="4000"
+                        rows="8"
+                        placeholder="Tell us how we can help you..."></textarea>
+                    <div class="char-count">
+                        <span id="char-counter">0</span> / 4000 characters
+                    </div>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> Submit Message
+                    </button>
+                    <a href="tel:737-708-5302" class="btn btn-outline btn-large">
+                        <i class="fas fa-phone"></i> Call Now: (737) 708-5302
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>

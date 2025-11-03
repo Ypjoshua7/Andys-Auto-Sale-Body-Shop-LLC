@@ -1,0 +1,163 @@
+<div class="home-page">
+    <!-- Language Toggle - Mobile Friendly -->
+    <div class="language-toggle">
+        <button onclick="switchLanguage('home')" class="btn-lang">
+            <i class="fas fa-language"></i> English
+        </button>
+    </div>
+
+    <!-- Hero Section with Images -->
+    <section class="hero">
+        <div class="hero-slider" id="hero-slider">
+            <!-- Hero slides will be dynamically added -->
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">
+                Encuentra Tu Vehículo
+                <span class="gradient-text">Perfecto Hoy</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Vehículos usados de calidad, servicio experto y soluciones de financiamiento adaptadas a tus necesidades.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                <button class="btn btn-primary" onclick="scrollToInventory()">
+                    <i class="fas fa-car"></i> Ver Inventario
+                </button>
+                <a href="tel:737-708-5302" class="btn btn-outline">
+                    <i class="fas fa-phone"></i> Llamar: (737) 708-5302
+                </a>
+                <button class="btn btn-outline" onclick="navigateTo('bodyshop-spanish')">
+                    <i class="fas fa-wrench"></i> Taller de Carrocería
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos="zoom-in">
+                    <div class="feature-icon"><i class="fas fa-car"></i></div>
+                    <h3>Vehículos de Calidad</h3>
+                    <p>Inventario seleccionado con inspecciones detalladas</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Financiamiento Flexible</h3>
+                    <p>Financiamiento interno con aprobación para todos los tipos de crédito</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Taller Experto</h3>
+                    <p>Reparación de colisiones y servicios de pintura profesionales</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Garantía de Calidad</h3>
+                    <p>Todos los vehículos vienen con opciones de garantía</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Slider Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nuestra Galería</h2>
+            <p class="section-subtitle" data-aos="fade-up">Explora nuestros últimos vehículos y taller</p>
+            
+            <div class="gallery-slider" id="gallery-slider">
+                <!-- Gallery images will be added here -->
+            </div>
+            <div class="gallery-dots" id="gallery-dots"></div>
+        </div>
+    </section>
+
+    <!-- Rest of Spanish content similar to English version -->
+    <!-- Inventory Section -->
+    <section class="inventory" id="inventory-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Inventario de Vehículos</h2>
+            <p class="section-subtitle" data-aos="fade-up">Explora nuestra selección completa de vehículos de calidad</p>
+            
+            <div class="filters-container" data-aos="fade-up">
+                <div class="filters-header">
+                    <h3><i class="fas fa-filter"></i> Buscar y Filtrar</h3>
+                    <button class="btn-text" onclick="clearFilters()">Limpiar Todo</button>
+                </div>
+                <div class="filters-grid">
+                    <input type="text" id="search" placeholder="Buscar por marca, modelo, año..." class="input">
+                    <select id="make-filter" class="select" onchange="applyFilters()">
+                        <option value="all">Todas las Marcas</option>
+                    </select>
+                    <select id="type-filter" class="select" onchange="applyFilters()">
+                        <option value="all">Todos los Tipos</option>
+                        <option value="Sedan">Sedán</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Truck">Camioneta</option>
+                    </select>
+                    <select id="sort-filter" class="select" onchange="applyFilters()">
+                        <option value="newest">Más Nuevos Primero</option>
+                        <option value="price-low">Precio: Menor a Mayor</option>
+                        <option value="price-high">Precio: Mayor a Menor</option>
+                    </select>
+                </div>
+                <div id="results-count"></div>
+            </div>
+
+            <div id="vehicle-grid" class="vehicle-grid"></div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Contáctanos</h2>
+            <p class="section-subtitle" data-aos="fade-up">¿Tienes preguntas? ¡Envíanos un mensaje!</p>
+            
+            <form id="home-contact-form" class="contact-form-home" data-aos="fade-up">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name"><i class="fas fa-user"></i> Nombre Completo *</label>
+                        <input type="text" id="contact-name" name="name" required class="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone"><i class="fas fa-phone"></i> Número de Teléfono *</label>
+                        <input type="tel" id="contact-phone" name="phone" required class="input">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                    <input type="email" id="contact-email" name="email" class="input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-message"><i class="fas fa-comment"></i> Tu Mensaje * (Hasta 4,000 caracteres)</label>
+                    <textarea 
+                        id="contact-message" 
+                        name="message" 
+                        required 
+                        class="textarea" 
+                        maxlength="4000"
+                        rows="8"
+                        placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                    <div class="char-count">
+                        <span id="char-counter">0</span> / 4000 caracteres
+                    </div>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                    <a href="tel:737-708-5302" class="btn btn-outline btn-large">
+                        <i class="fas fa-phone"></i> Llamar Ahora: (737) 708-5302
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,52 @@
+<div class="contact-page">
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button onclick="switchLanguage('contact')" class="btn-lang">English 🇺🇸</button>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <p>¡Estamos aquí para ayudar! Comunícate con cualquier pregunta</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>📞 Teléfono</h3>
+                        <p>(555) 123-4567</p>
+                        <p class="info-detail">Lunes - Viernes: 9AM - 7PM<br>Sábado: 9AM - 6PM<br>Domingo: Cerrado</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📧 Correo Electrónico</h3>
+                        <p>info@autopremier.com</p>
+                        <p class="info-detail">Generalmente respondemos dentro de 24 horas</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📍 Ubicación</h3>
+                        <p>123 Auto Lane<br>Your City, ST 12345</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Obtener Direcciones</a>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <h2>Envíanos un Mensaje</h2>
+                    <p class="form-subtitle">Complete el formulario a continuación y nos comunicaremos contigo lo antes posible</p>
+                    
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Nombre Completo *" required class="input">
+                        <input type="tel" name="phone" placeholder="Número de Teléfono *" required class="input">
+                    </div>
+                    <input type="email" name="email" placeholder="Dirección de Correo Electrónico *" required class="input">
+                    <input type="text" name="vehicle" placeholder="Vehículo Sobre el que Tienes Preguntas" class="input">
+                    <textarea name="message" placeholder="Tu Mensaje *" required class="textarea"></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    <p class="form-note">Respetamos tu privacidad y nunca compartiremos tu información</p>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
